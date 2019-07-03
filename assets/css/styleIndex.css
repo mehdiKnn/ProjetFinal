@@ -1,0 +1,309 @@
+body {
+    margin: 0;
+    padding: 0;
+
+}
+
+
+#main{
+    z-index: 0;
+    background-image: url("../img/Webp.net-resizeimage.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: calc(100vh - 26vh);
+    max-width: 100vw;
+}
+
+#container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#titleIndex{
+    margin: 0;
+    color: white;
+    padding-top: 0.8%;
+}
+
+#firstContainer{
+    margin-top: 1%;
+    background-image: url("../img/opacite.png");
+    width: 85%;
+    margin-bottom: 2%;
+
+}
+
+#subContainer{
+    text-align: center;
+}
+
+hr{
+    width: 20%;
+    border: 1px solid black;
+}
+
+.containerUp{
+    display: flex;
+    flex-direction:row;
+    padding: 10px;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+#sideImage{
+    width: 100%;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175)
+}
+
+#subUpRight{
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+}
+
+#subUpLeft{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+#upRight{
+    max-width: 50%;
+    display: flex;
+    padding: 10px;
+}
+#upLeft{
+   max-width: 50%;
+    display: flex;
+    padding: 10px;
+}
+
+#botContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.evenementIndex{
+    display: flex;
+    flex-direction: column;
+    width: 18%;
+    padding: 1%;
+    background-color: white;
+    margin: 40px;
+    justify-content: center;
+    text-align: left;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175)
+}
+
+#date{
+    font-style: italic;
+}
+
+#mobileHr{
+    display: none;
+}
+
+#titleIndexMobile{
+    display: none;
+}
+
+#containerImg{
+    width: 50%;
+    padding: 0 20px 0  20px;
+}
+
+#subUpRight, #subUpLeft{
+    width: 50%;
+}
+
+#overlayImg{
+    display: none;
+}
+
+.overlayEvenement{
+    display: none;
+}
+
+h3{
+    margin-top: 0;
+}
+
+@keyframes clockwisespin {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+
+@keyframes anticlockwisespin {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(-360deg);}
+}
+
+@keyframes fadeout {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+
+@keyframes fadein {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@media all and (max-width: 1024px) {
+
+    .containerUp{
+        flex-direction: column;
+    }
+
+    #upRight{
+        max-width: none;
+    }
+    #upLeft{
+        max-width: none;
+    }
+    #subUpRight{
+        padding-right: 20px;
+        width: 50%;
+    }
+    #subUpLeft{
+        padding-left: 20px;
+        width: 50%;
+    }
+
+    *{
+        font-size: 12px;
+    }
+    #button{font-size: 12px}
+
+}
+
+@media all and (max-height: 700px) {
+
+    .space{
+        width: 24px;
+        height: 24px;
+    }
+
+    *{
+        font-size: 12px;
+    }
+    #button{font-size: 4vw}
+}
+
+@media all and (max-width: 700px) {
+    *{
+        font-size: 14px;
+    }
+
+    #botContainer{
+        flex-direction: column;
+    }
+
+    .evenementIndex{
+        width: auto;
+        height: auto;
+        box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+        margin-top: 10px;
+        margin-bottom: 20px;
+        position: relative;
+    }
+
+    .overlayEvenement{
+        display: block;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        padding: 8px;
+        COLOR: white;
+        background-color: #88AB75;
+    }
+
+
+    .containerUp{
+        flex-direction: column;
+        padding-top: 0;
+    }
+
+    #upRight, #upLeft{
+        max-width: 100%;
+    }
+    #upLeft{
+        padding-top: 0;
+        flex-direction: column;
+    }
+
+    #upRight{
+        flex-direction: column-reverse;
+    }
+
+    #sideImage{
+        width: 100%;
+        padding: 0;
+        max-height: none;
+    }
+
+    #mobileHr{
+        display: block;
+    }
+
+    #subUpLeft{
+        width: auto;
+        padding-right: 20px;
+        padding-top: 0;
+    }
+
+    #subUpRight{
+        text-align: left;
+        width: auto;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    #containerImg{
+        width: auto;
+        position: relative;
+    }
+
+    #firstContainer{
+        width: 95%;
+    }
+    #overlayImg{
+        position: absolute;
+        z-index: 10;
+        bottom: 0;
+        left: 0;
+        margin-left: 20px;
+        margin-bottom: 4px;
+        background-color: #88AB75 ;
+        color: white;
+        padding: 8px;
+        display: block;
+    }
+
+}
+
+@media all and (max-width: 425px) {
+
+    #main{
+        background-image: none;
+    }
+
+    #titleIndex{
+        display: none;
+    }
+    #titleIndexMobile{
+        display: block;
+        font-size: 16px;
+    }
+    
+    #indexTitle{
+        display: none;
+    }
+
+    hr{
+        width: 51%;
+    }
+
+}

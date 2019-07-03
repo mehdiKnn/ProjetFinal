@@ -1,0 +1,213 @@
+#main{
+    z-index: 0;
+    background-image: url("../img/Webp.net-resizeimage.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+#selectType{
+    display: inline-block;
+    width: 100%;
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem 1.75rem .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    vertical-align: middle;
+    border: 1px solid #ced4da;
+    border-radius: 1px;
+
+}
+
+#faq{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+   margin: 5% 0 5% 0;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.5);
+
+}
+
+.collapsible {
+    background-color: #555;
+    color: white;
+    padding: 18px;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    border: none;
+    border-bottom: 1px solid white;
+}
+
+.collHover{
+    cursor: pointer;
+    border:none;
+    background-color: #88AB75   ;
+}
+
+.active, .collHover:hover {
+    background-color: #555;
+}
+
+.content {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+#section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#sectionContact{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 50vh;
+    padding: 5% 0 5% 0 ;
+}
+
+.vl {
+    border-left: 1px solid gray;
+    min-height: 45vh;
+    margin: 0 3% 0 3%;
+}
+
+form{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+#allSelect{
+  display: flex;
+    justify-content: space-between;
+}
+
+select{
+    width: 40%;
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem 1.75rem .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    vertical-align: middle;
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    margin-bottom: 4%;
+}
+
+#allInput{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 3% 0 3% 0;
+}
+
+input{
+    width: 100%;
+    height: 30px;
+    border: none;
+    text-transform: uppercase;
+    z-index: 10000000;
+    opacity: 0;
+}
+
+.lastTouch{
+    display: flex;
+    position: relative;
+    border-bottom: 1px solid rgba(0,0,0,0.54);
+    margin-bottom: 30px;
+    width: 40%;
+}
+
+label{
+    color: rgba(0,0,0,0.54);
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    right: auto;
+}
+
+input:focus{
+    background-color: white;
+}
+
+textarea{
+    min-height: 10%;
+    font-size: 15px;
+}
+
+.formContact{
+    padding: 30px;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.5);
+}
+
+#divSubject{
+    width: 100%;
+}
+
+.boutonConnexion{
+    background-color: #FFCC00;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    width: 50%;
+    align-self: flex-end;
+    margin: 6% 0 0 0;
+}
+
+.boutonConnexion:hover {
+    background-color: #DDB100;
+    cursor: pointer;
+}
+hr{
+    display: none;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.5);
+}
+
+@media all and (max-width: 800px){
+
+    #sectionContact{
+        flex-direction: column;
+        min-height: 50vh;
+        height: auto;
+    }
+
+    .vl{
+       display: none;
+    }
+
+    form{
+        width: 90%;
+        height: auto;
+    }
+
+    hr{
+        display: block;
+        border: 1px solid black;
+        width: 50%;
+        margin: 5% 0 5% 0 ;
+    }
+
+    #main{
+        background-image: none;
+    }
+}

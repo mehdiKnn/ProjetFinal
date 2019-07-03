@@ -1,0 +1,212 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/** ------------------------------------------HEADER---------------------------------------**/
+nav{
+    display: flex;
+    justify-content: center;
+    background-color: #88AB75;
+    height: 9vh;
+    width: 100%;
+}
+
+ul{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    list-style-type: none;
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    text-align: center;
+}
+
+li{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    z-index: 10000;
+
+}
+
+li a {
+    text-decoration: none;
+    color: white;
+    padding: 0 3vw 0 3vw;
+}
+
+
+li:hover{
+    background-color: #698759;
+    height: 120%;
+}
+
+#logo{
+    position: absolute;
+    top: 1%;
+    left: 20px;
+    height: 10.5vh;
+    width: auto;
+}
+/** ------------------------------------------NAV MOBILE---------------------------------------**/
+
+#navMobile{
+    display: none;
+    background-color: #88AB75;
+    width: 100%;
+    position: absolute;
+    z-index: 1000;
+    height: 50%;
+}
+
+#orderedNav {
+    flex-direction: column;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+
+}
+
+#orderedNav a{
+    text-decoration: none;
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: bold;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+#orderedNav a:hover{
+    background-color: #698759;
+}
+
+#alignDisplayMenu{
+    display: none;
+}
+
+#closeBouton{
+    padding-left: 14%;
+    display: none;
+}
+/** ------------------------------------------FOOTER---------------------------------------**/
+
+footer{
+    width: 100%;
+    height: 17vh;
+    display: flex;
+    color: white;
+    bottom: 0;
+}
+
+#info{
+    background-color: #88AB75;
+    height: 100%;
+    width: 55%;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+#map{
+    height: 100%;
+    width: 45%;
+}
+
+.side{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    margin-bottom: 1%;
+    box-sizing: border-box;
+}
+
+.title{
+    font-weight: bold;
+}
+
+#button{
+    color: black;
+    background-color: white;
+    border-radius: 100px;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.social{
+    display: flex;
+    align-items: center;
+}
+
+.space{
+    margin-right: 6%;
+}
+
+@media all and (max-width: 800px) {
+    nav{
+        height: 7vh;
+        align-items: center;
+        justify-content: center;
+    }
+    nav ul{
+        display: none;
+    }
+
+    #logo{
+        height: 38px;
+        position: relative;
+        left: 0;
+        top: 0;
+    }
+
+    #alignDisplayMenu{
+        display: block;
+        position: absolute;
+        left: 21px;
+    }
+
+    #displayMenu{
+        display: flex;
+        padding-left: 10%;
+    }
+
+    footer{
+        flex-direction: column;
+    }
+
+    #info{
+        width: auto;
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+
+    #map{
+        width: auto;
+        height: auto;
+    }
+
+    .side{
+        min-height: 125px;
+        margin-top: 0;
+        align-items: center;
+    }
+
+    #button{
+        width: 50%;
+    }
+    .lilspace{
+        padding-left: 5%;
+    }
+}
