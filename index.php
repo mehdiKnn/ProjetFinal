@@ -83,11 +83,11 @@ if(isset($_GET['page'])){
                 require('./controller/index_controller.php');
                 break;
         }
+
     }
 
 
-}
-else{
+}else{
 
     require('./controller/index_controller.php');
 

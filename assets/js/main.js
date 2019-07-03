@@ -1,6 +1,6 @@
 let url = window.location.href
 switch (url) {
-    case 'http://www.kannouni.fr/?page=informations' :
+    case 'http://www.kannouni.fr/index.php?page=informations' :
         let map
         let Pantin = {lat: 48.894533, lng: 2.409630}
         let parent = document.getElementById('contenu')
@@ -156,7 +156,7 @@ switch (url) {
 
         break;
 
-    case 'http://www.kannouni.fr/?page=events' :
+    case 'http://www.kannouni.fr/index.php?page=events' :
         let date = document.getElementById('datepickr')
         let closeBoutonEvent = document.getElementById('boutonClose')
         let modalEvent = document.getElementById('modalCenter')
@@ -321,7 +321,7 @@ switch (url) {
         initEvent()
         break;
 
-    case 'http://www.kannouni.fr/?page=contact':
+    case 'http://www.kannouni.fr/index.php?page=contact':
         let catChoice = document.getElementById('selectCat')
         let subCatChoice = document.getElementById('selectSubCat')
 
@@ -496,7 +496,7 @@ switch (url) {
 
         break;
 
-    case 'http://www.kannouni.fr/?page=login':
+    case 'http://www.kannouni.fr/index.php?page=login':
 
         let inputLogin = document.getElementById('inputLogin')
         let labelLogin  = document.getElementById('labelLogin')

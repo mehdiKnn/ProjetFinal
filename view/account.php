@@ -15,28 +15,31 @@
     <div id="container">
         <div id="firstContainer">
             <h2 id="accountTitle">Mon Compte</h2>
-            <span id="accountTitle">Prenom : Mehdi</span>
-            <span id="accountTitle">Nom : Kannouni</span>
-            <span id="accountTitle">Date de naissance : 20/12/1998</span>
-            <span id="accountTitle">Adresse : 22 rue Etienne Marcel</span>
-            <span id="accountTitle">Numéro de téléphone : 0658656818</span>
-            <span id="accountTitle">Mail : mehdi.kannouni@hotmail.fr</span>
+            <span id="accountTitle">Prenom : <?= $userInfo['lastname'] ?></span>
+            <span id="accountTitle">Nom :  <?= $userInfo['firstname'] ?></span>
+            <span id="accountTitle">Date de naissance :  <?= $userInfo['birthdate'] ?></span>
+            <span id="accountTitle">Adresse :  <?= $userInfo['adresse'] ?></span>
+            <span id="accountTitle">Numéro de téléphone :  <?= $userInfo['phone_number'] ?></span>
+            <span id="accountTitle">Mail :  <?= $userInfo['mail'] ?></span>
         </div>
             <div id="firstContainer">
+                <?php var_dump($fees)?>
+                <?php foreach ($fees as $fee):?>
                     <div id="facture">
                         <div id="subFacture">
-                            <span>Cantine décembre</span>
-                            <span>Statut  : payée</span>
+                            <span><?= $fee['name'] ?></span>
+                            <span>Statut  : impayée</span>
                         </div>
                         <div id="subFacture">
-                            <span>20/12/1998</span>
-                            <span>120 €</span>
+                            <span><?= $fee['date'] ?></span>
+                            <span><?= $fee['amount'] ?></span>
                         </div>
                         <div id="subFacture">
-                            <span>Consulter ma facture</span>
-                            <span>Telechargé</span>
+                            <span><a href="./assets/facture/<?= $fee['file']; ?>">Visionner</a></span>
+                            <span><a href="./assets/facture/<?= $fee['file']; ?>" download>Télécharger</a></span>
                         </div>
                     </div>
+                <?php endforeach;?>
             </div>
     </div>
 
